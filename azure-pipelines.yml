@@ -12,8 +12,8 @@ pool:
 steps:
   - checkout: self  # This checks out the repo connected to the pipeline
 
-  - script: |
-      echo "Repository has been checked out."
-      ls -la
+  - powershell: |
+      Write-Host "Repository has been checked out."
+      Get-ChildItem -Recurse
     displayName: 'List checked out files'
 
