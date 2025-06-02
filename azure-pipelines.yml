@@ -1,0 +1,19 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  - main  # or your default branch
+
+pool:
+  name: Default  # Change this to your self-hosted agent pool name
+
+steps:
+  - checkout: self  # This checks out the repo connected to the pipeline
+
+  - script: |
+      echo "Repository has been checked out."
+      ls -la
+    displayName: 'List checked out files'
+
