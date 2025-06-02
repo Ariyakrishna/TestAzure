@@ -7,7 +7,7 @@ trigger:
   - main  # or your default branch
 
 pool:
-  name: Default  # Change this to your self-hosted agent pool name
+  name: TestAgent  # Change this to your self-hosted agent pool name
 
 steps:
   - checkout: self  # This checks out the repo connected to the pipeline
